@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const projects = [
   {
@@ -255,12 +256,42 @@ function ProjectCard({
               ease: "easeOut",
             }}
           >
-            {project.visual === "beauty" && <BeautyVisual />}
+            {project.visual === "beauty" && (
+  <div className="relative aspect-[2.4/1] w-full max-w-[1250px] overflow-hidden rounded-xl">
+    <Image
+      src="/images/projects/beauty-hub.png"
+      alt="Beauty Hub booking platform showcase"
+      fill
+      sizes="(max-width: 768px) 100vw, 1100px"
+      className="object-cover"
+      priority
+    />
+  </div>
+)}
 
-            {project.visual === "aqua" && <AquaVisual />}
+           {project.visual === "aqua" && (
+  <div className="relative aspect-[2.4/1] w-full max-w-[1250px] overflow-hidden rounded-xl">
+    <Image
+      src="/images/projects/aquakala.png"
+      alt="Aquakala aquatic e-commerce website showcase"
+      fill
+      sizes="(max-width: 768px) 100vw, 1100px"
+      className="object-cover"
+    />
+  </div>
+)}
 
-            {project.visual === "commerce" && <CommerceVisual />}
-          </motion.div>
+{project.visual === "commerce" && (
+  <div className="relative aspect-[2.4/1] w-full max-w-[1250px] overflow-hidden rounded-xl">
+    <Image
+      src="/images/projects/digital-commerce.png"
+      alt="Digital Commerce e-commerce dashboard and storefront showcase"
+      fill
+      sizes="(max-width: 768px) 100vw, 1100px"
+      className="object-cover"
+    />
+  </div>
+)}          </motion.div>
         </div>
       </Link>
 
