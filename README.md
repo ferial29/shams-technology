@@ -60,6 +60,9 @@ public/
 
 ### 💻 Local Development
 
+For the lower-cost Cloudflare Workers deployment option, see
+[Cloudflare deployment instructions](docs/cloudflare-deployment.md).
+
 Clone the repository:
 
 ```bash

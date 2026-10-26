@@ -9,6 +9,10 @@ type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
+export function generateStaticParams() {
+  return [{ slug: "beauty-hub" }];
+}
+
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
@@ -308,3 +312,4 @@ export default async function WorkDetailPage({ params }: PageProps) {
     </>
   );
 }
+
